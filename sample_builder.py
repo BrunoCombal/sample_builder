@@ -27,7 +27,7 @@ import resources
 # Import the code for the dialog
 from sample_builder_dialog import SampleBuilderDialog
 import os.path
-
+import samplePlan
 
 class SampleBuilder:
     """QGIS Plugin Implementation."""
