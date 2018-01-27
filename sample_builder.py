@@ -28,6 +28,7 @@ import resources
 from sample_builder_dialog import SampleBuilderDialog
 import os.path
 import samplePlan
+import sample_builder_ui_settings
 
 class SampleBuilder:
     """QGIS Plugin Implementation."""
@@ -158,6 +159,34 @@ class SampleBuilder:
 
         return action
 
+    #________________________
+    def cbSRSFromFileChanged(self):
+        if not self.checkBoxSRSFromFile.isChecked():
+            self.dlg.srsRefFilename.setEnabled(False)
+        else:
+            self.dlg.srsRefFilename.setEnabled(True)
+
+    def cbStrataFromFileChanged(self):
+        if not self.checkBoxStrataFromFile.isChecked():
+            self.dlg.strataFromFile.setEnabled(False)
+        else:
+            self.dlg.strataFromFile.setEnabled(True)
+
+    def connectAll(self):
+        # spatial reference
+        self.dlg.checkBoxSRSFromFile.stateChanged( self.cbSRSFromFileChanged )
+        # strata
+        self.dlg.checkBoxStrataFromFile.stateChanged( self.cbStrataFromFileChanged )
+
+    def initAll(self):
+        self.dlg.checkBoxSRSFromFile.setChecked(False)
+        self.dlg.srsRefFilename.setText(u'')
+
+        self.dlg.checkBoxStrataFromFile.setChecked(False)
+        self.dlg.strataFromFile.setText(u'')
+    
+    #________________________
+
     def initGui(self):
         """Create the menu entries and toolbar icons inside the QGIS GUI."""
 
@@ -168,6 +197,8 @@ class SampleBuilder:
             callback=self.run,
             parent=self.iface.mainWindow())
 
+        self.connectAll()
+        self.initAll()
 
     def unload(self):
         """Removes the plugin menu item and icon from QGIS GUI."""
