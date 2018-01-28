@@ -186,7 +186,6 @@ class SampleBuilder:
         self.dlg.strataFromFile.setText(u'')
     
     #________________________
-
     def initGui(self):
         """Create the menu entries and toolbar icons inside the QGIS GUI."""
 
