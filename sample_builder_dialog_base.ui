@@ -107,7 +107,7 @@
       <item>
        <layout class="QHBoxLayout" name="hrLayoutSpacing">
         <item>
-         <widget class="QLabel" name="label_6">
+         <widget class="QLabel" name="labelHRSRSSpacing">
           <property name="text">
            <string>Horizontal:</string>
           </property>
@@ -137,7 +137,7 @@
          </spacer>
         </item>
         <item>
-         <widget class="QLabel" name="label_7">
+         <widget class="QLabel" name="labelVRSRSSpacing">
           <property name="text">
            <string>Vertical:</string>
           </property>
@@ -182,9 +182,9 @@
        </layout>
       </item>
       <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <layout class="QHBoxLayout" name="hrLayoutRandom">
         <item>
-         <widget class="QRadioButton" name="radioButton_2">
+         <widget class="QRadioButton" name="radioRandom">
           <property name="minimumSize">
            <size>
             <width>10</width>
@@ -209,14 +209,14 @@
          </widget>
         </item>
         <item>
-         <widget class="QLabel" name="label_4">
+         <widget class="QLabel" name="labelNumberRandom">
           <property name="text">
            <string>Number of points to distribute</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QSpinBox" name="spinBox">
+         <widget class="QSpinBox" name="sbRandomNumber">
           <property name="showGroupSeparator" stdset="0">
            <bool>true</bool>
           </property>
