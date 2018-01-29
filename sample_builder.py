@@ -28,7 +28,6 @@ import resources
 from sample_builder_dialog import SampleBuilderDialog
 import os.path
 import samplePlan
-import sample_builder_ui_settings
 
 class SampleBuilder:
     """QGIS Plugin Implementation."""
